@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/06 15:47:20 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:45:58 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,36 @@ class Bureaucrat {
 		// Constructors
 		Bureaucrat( void );
 		Bureaucrat( std::string name, int grade );
-		Bureaucrat( const Bureaucrat &bureaucrat );
+		Bureaucrat( const Bureaucrat &copy );
 
 		// Destructor
 		~Bureaucrat( void );
 
 		// Copy assignment operator overload
-		Bureaucrat & operator = ( const Bureaucrat &bureaucrat );
+		Bureaucrat & operator = ( const Bureaucrat &copy );
 
-		std::ostream & operator << (const Bureaucrat &bureaucrat);
 
 		// Getters
-		const std::string	getName( void );
-		int					getGrade( void );
-
-		// Setters
+		std::string	getName( void ) const;
+		int			getGrade( void ) const;
 
 		// Methods
 		void	incrementGrade( void );
 		void	decrementGrade( void );
+
+		// Exceptions
+		class GradeTooHighException : public std::exception {
+			public:
+				const char *what( void ) const throw();
+		};
+
+		class GradeTooLowException : public std::exception {
+			public:
+				const char *what( void ) const throw();
+		};
 };
+
+// Insertion opperator overload
+std::ostream & operator << (std::ostream &out, const Bureaucrat &bureaucrat);
 
 #endif

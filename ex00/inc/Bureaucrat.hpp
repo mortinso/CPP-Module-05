@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/18 18:45:58 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/18 19:53:50 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
 
 # define BOLD "\e[1m"
 # define ITALIC "\e[3m"

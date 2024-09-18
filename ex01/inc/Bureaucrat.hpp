@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/18 18:45:58 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:43:51 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include <exception>
+# include "Form.hpp"
 
 # define BOLD "\e[1m"
 # define ITALIC "\e[3m"
@@ -26,6 +28,8 @@
 # define CYAN "\e[96m"
 # define INVERT "\e[90m\e[107m"
 # define RESET "\e[0m"
+
+class Form;
 
 class Bureaucrat {
 	private:
@@ -52,6 +56,7 @@ class Bureaucrat {
 		// Methods
 		void	incrementGrade( void );
 		void	decrementGrade( void );
+		void	signForm( Form &form );
 
 		// Exceptions
 		class GradeTooHighException : public std::exception {

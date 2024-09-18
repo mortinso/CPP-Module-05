@@ -7,8 +7,8 @@ SRC_DIR = src
 INC_DIR = inc
 OBJ_DIR = .obj
 
-SRC_FILES = main.cpp Bureaucrat.cpp
-INC_FILES = Bureaucrat.hpp
+SRC_FILES = main.cpp Bureaucrat.cpp Form.cpp
+INC_FILES = Bureaucrat.hpp Form.hpp
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 HDRS = $(addprefix $(INC_DIR)/, $(INC_FILES))

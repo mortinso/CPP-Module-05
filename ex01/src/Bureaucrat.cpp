@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:35 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/18 19:08:47 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/18 20:49:52 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,28 @@ void Bureaucrat::decrementGrade( void ) {
 	this->grade++;
 }
 
+void Bureaucrat::signForm( Form &form ) {
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->name << " signed " << form.getName() << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << this->name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
+
 // -----------------------------------Exceptions--------------------------------
 const char *Bureaucrat::GradeTooHighException::what( void ) const throw() {
-	return ("Grade too high.");
+	return ("Grade is too high.");
 }
 
 const char *Bureaucrat::GradeTooLowException::what( void ) const throw() {
-	return ("Grade too low.");
+	return ("Grade is too low.");
 }
 
 // Insertion operator overload
 std::ostream& operator << ( std::ostream &out, const Bureaucrat &bureaucrat ) {
-	return (out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() \
-		<< "." << std::endl);
+	return (out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << "." << std::endl);
 }

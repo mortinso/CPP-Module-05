@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/20 15:26:27 by mortins-          #+#    #+#             */
+/*   Updated: 2024/09/20 15:27:13 by mortins-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/Form.hpp"
 
 // Default constructor
-Form::Form( void ) : name("form"), signGrade(150), executeGrade(150), isSigned(false) {
+Form::Form( void ) : name("form"), isSigned(false), signGrade(150), executeGrade(150) {
 	// std::cout << "Form default constructor called" <<std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:11:40 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 16:17:48 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:27:47 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,22 @@
 
 class PresidentialPardonForm : public AForm {
 	private:
+	const std::string	target;
 
 	public:
 		// Constructors
 		PresidentialPardonForm( void );
-		PresidentialPardonForm( const PresidentialPardonForm &_presidentialpardonform );
+		PresidentialPardonForm( const std::string _target );
+		PresidentialPardonForm( const PresidentialPardonForm &_ppform );
 
 		// Destructor
 		~PresidentialPardonForm( void );
 
 		// Copy assignment operator overload
-		PresidentialPardonForm & operator = ( const PresidentialPardonForm &_presidentialpardonform );
-
-		// Getters
-
-		// Setters
+		PresidentialPardonForm & operator = ( const PresidentialPardonForm &_ppform );
 
 		// Methods
+		void	execution( void ) const;
 };
 
 #endif

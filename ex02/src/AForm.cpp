@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:26:27 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 15:52:11 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:48:50 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,15 @@ void AForm::beSigned( Bureaucrat &bureaucrat ) {
 	this->isSigned = true;
 }
 
+void AForm::execute( const Bureaucrat &executor ) const {
+	if (this->isSigned == false)
+		throw (FormNotSignedException());
+	if (executor.getGrade() > this->executeGrade)
+		throw (GradeTooLowException());
+
+	this->execution();
+}
+
 // -----------------------------------Exceptions--------------------------------
 const char *AForm::GradeTooHighException::what( void ) const throw() {
 	return ("Grade is too high.");
@@ -81,6 +90,10 @@ const char *AForm::GradeTooHighException::what( void ) const throw() {
 
 const char *AForm::GradeTooLowException::what( void ) const throw() {
 	return ("Grade is too low.");
+}
+
+const char *AForm::FormNotSignedException::what( void ) const throw() {
+	return ("Form isn't signed.");
 }
 
 // Insertion operator overload

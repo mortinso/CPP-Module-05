@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:40:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 16:15:29 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:31:31 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,9 @@ class AForm {
 		int			getExecuteGrade( void ) const;
 
 		// Methods
-		void	beSigned( Bureaucrat &bureaucrat );
+		void			beSigned( Bureaucrat &bureaucrat );
+		void			execute( const Bureaucrat &executor ) const;
+		virtual void	execution( void ) const = 0;
 
 		// Exceptions
 		class GradeTooHighException : public std::exception {
@@ -53,6 +55,11 @@ class AForm {
 		};
 
 		class GradeTooLowException : public std::exception {
+			public:
+				const char *what( void ) const throw();
+		};
+		
+		class FormNotSignedException : public std::exception {
 			public:
 				const char *what( void ) const throw();
 		};

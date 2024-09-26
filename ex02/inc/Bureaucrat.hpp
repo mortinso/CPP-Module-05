@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 16:15:26 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:51:23 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ class Bureaucrat {
 		void	incrementGrade( void );
 		void	decrementGrade( void );
 		void	signForm( AForm &aform );
+		void	executeForm( const AForm &aform );
 
 		// Exceptions
 		class GradeTooHighException : public std::exception {

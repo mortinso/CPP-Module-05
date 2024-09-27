@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:12:19 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/26 18:29:33 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:44:47 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ RobotomyRequestForm::RobotomyRequestForm( std::string _target ) : AForm("Robotom
 }
 
 // Copy constructor
-RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm &_rrform ) {
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm &_rrform ) : AForm(_rrform.getName(), 72, 45), target(_rrform.target) {
 	// std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
-	*this = _rrform;
 }
 
 // Destructor

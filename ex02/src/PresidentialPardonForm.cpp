@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:12:09 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/26 18:29:37 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:44:04 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ PresidentialPardonForm::PresidentialPardonForm( const std::string _target ) : AF
 }
 
 // Copy constructor
-PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm &_ppform ) {
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm &_ppform ) : AForm(_ppform.getName(), 25, 5), target(_ppform.target) {
 	// std::cout << "PresidentialPardonForm copy constructor called" << std::endl;
-	*this = _ppform;
 }
 
 // Destructor

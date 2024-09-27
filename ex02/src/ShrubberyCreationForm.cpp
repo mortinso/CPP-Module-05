@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:12:28 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/26 18:29:29 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:46:58 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ ShrubberyCreationForm::ShrubberyCreationForm( std::string _target ) : AForm("Shr
 }
 
 // Copy constructor
-ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm &_scform ) {
+ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm &_scform ) : AForm(_scform.getName(), 145, 137), target(_scform.target) {
 	// std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
-	*this = _scform;
 }
 
 // Destructor
@@ -44,7 +43,8 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator = ( const ShrubberyCreati
 
 // -----------------------------------Methods-----------------------------------
 void	ShrubberyCreationForm::execution( void ) const {
-	std::ofstream targetFile(this->target.c_str());
+	std::string fileName = this->target + "_shrubbery";
+	std::ofstream targetFile(fileName.c_str());
 	if (!targetFile.is_open())
 	{
 		std::cout << "Open file error\n";

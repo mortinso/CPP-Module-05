@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:26:27 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/26 18:48:50 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:30:10 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,6 @@ const char *AForm::FormNotSignedException::what( void ) const throw() {
 
 // Insertion operator overload
 std::ostream& operator << ( std::ostream &out, const AForm &aform ) {
-	return (out << "AForm: " << aform.getName() << std::endl << "Signed: " << aform.getIsSigned() << std::endl \
-		<< "Sign Grade: " << aform.getSignGrade() << "Execute Grade: " << aform.getExecuteGrade() << std::endl);
+	return (out << "Form: " << aform.getName() << std::endl << "Signed: " << aform.getIsSigned() << std::endl \
+		<< "Sign Grade: " << aform.getSignGrade() << std::endl << "Execute Grade: " << aform.getExecuteGrade() << std::endl);
 }

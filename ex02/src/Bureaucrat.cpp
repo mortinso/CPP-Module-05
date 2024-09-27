@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:35 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/26 18:54:03 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:14:06 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void Bureaucrat::signForm( AForm &aform ) {
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << this->name << " couldn't sign " << aform.getName() << " because: " << e.what() << std::endl << std::endl;
+		std::cout << this->name << " couldn't sign " << aform.getName() << " because: " << e.what() << std::endl;
 	}
 }
 

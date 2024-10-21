@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:40 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/27 16:43:45 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:16:50 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void) {
 	ShrubberyCreationForm sc_form("Cortex Island");
 	RobotomyRequestForm rr_form("Aku Aku");
 	PresidentialPardonForm pp_form("Doctor Neo Cortex");
-	
+
 	{ // Form Info
 		std::cout << GREEN << "Form Info" << RESET << std::endl;
 		std::cout << sc_form << std::endl;
@@ -86,7 +86,7 @@ int	main(void) {
 		try { crash.executeForm(pp_form); }
 		catch (const std::exception &e) { std::cout << e.what() << std::endl; }
 	}
-/* 	{ // 50% chance Test
+	/* { // 50% chance Test
 		for (int i = 0; i < 20; i++)
 		{
 			crash.executeForm(rr_form);

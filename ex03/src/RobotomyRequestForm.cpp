@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:12:19 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/27 15:44:47 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:20:23 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator = ( const RobotomyRequestForm
 
 // -----------------------------------Methods-----------------------------------
 void	RobotomyRequestForm::execution( void ) const {
+	srand(time(0) * rand());
 	std::cout << "WHIIIIIIIIIIIIIIIIIIRRRRRRRRRRRRRRRRRRRRRRRRR" << std::endl;
 	std::cout << "BRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" << std::endl;
 	std::cout << "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" << std::endl;

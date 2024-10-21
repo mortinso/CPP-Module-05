@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/18 20:43:51 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:39:11 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <iostream>
 # include "Form.hpp"
+
+# define RED "\e[91m"
+# define YELLOW "\e[93m"
+# define INVERT "\e[90m\e[107m"
+# define RESET "\e[0m"
 
 class Form;
 

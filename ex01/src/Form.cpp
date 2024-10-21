@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:26:27 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 15:27:13 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:37:25 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,5 @@ const char *Form::GradeTooLowException::what( void ) const throw() {
 // Insertion operator overload
 std::ostream& operator << ( std::ostream &out, const Form &form ) {
 	return (out << "Form: " << form.getName() << std::endl << "Signed: " << form.getIsSigned() << std::endl \
-		<< "Sign Grade: " << form.getSignGrade() << "Execute Grade: " << form.getExecuteGrade() << std::endl);
+		<< "Sign Grade: " << form.getSignGrade() << std::endl << "Execute Grade: " << form.getExecuteGrade() << std::endl);
 }

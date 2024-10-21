@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:26 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/20 15:48:15 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:19:40 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+
+# define INVERT "\e[90m\e[107m"
+# define RESET "\e[0m"
 
 class Bureaucrat {
 	private:

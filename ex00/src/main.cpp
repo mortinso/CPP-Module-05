@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 15:12:40 by mortins-          #+#    #+#             */
-/*   Updated: 2024/09/18 19:27:13 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/10/21 16:19:28 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	routine(std::string name, int grade) {
 	try {
+		std::cout << INVERT << name << ", grade " << grade << RESET << std::endl;
 		std::cout << "Original: ";
-		Bureaucrat guy(name, grade);
+		Bureaucrat	guy(name, grade);
 		std::cout << guy;
 		std::cout << "Lower: ";
 		guy.decrementGrade();
@@ -37,4 +38,11 @@ int main(void) {
 	routine("Secretary", 149);
 	routine("Janitor", 150);
 	routine("You", 151);
+	{ // Testing Getters
+		std::cout << INVERT << "Testing Getters" << RESET << std::endl;
+		Bureaucrat	guy("Bob", 51);
+
+		std::cout << "Name: " << guy.getName() << std::endl;
+		std::cout << "Grade: " << guy.getGrade() << std::endl;
+	}
 }
